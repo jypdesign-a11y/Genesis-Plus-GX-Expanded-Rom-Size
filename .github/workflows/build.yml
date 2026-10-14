@@ -15,7 +15,7 @@ jobs:
 
     - name: Build Core for ARMhf
       run: |
-        make -f Makefile.libretro platform=armhf
+        make -f Makefile.libretro CC=arm-linux-gnueabihf-gcc CXX=arm-linux-gnueabihf-g++
         
     - name: Upload Core
       uses: actions/upload-artifact@v4
